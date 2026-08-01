@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "manta-cert"
+version = "1.0.0"
+description = "SSL/TLS certificate checker — inspect expiry, issuer, and SANs from the command line"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Bobby Hansen Jr.", email = "bobby@hillcountryventures.co"},
+]
+keywords = ["cli", "utility", "manta"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/jrbobbyhansen-pixel/manta-cert"
+Repository = "https://github.com/jrbobbyhansen-pixel/manta-cert.git"
+Issues = "https://github.com/jrbobbyhansen-pixel/manta-cert/issues"
+
+[project.scripts]
+manta-cert = "manta_cert:main"
+
+[tool.setuptools.packages.find]
+include = ["manta_cert*"]
